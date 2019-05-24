@@ -41,7 +41,7 @@ SQL;
 
     if ($gene) {
       $node = node_load($gene->nid);
-      lightshop_add2basket($node);
+      lightshop_add2basket($node,$node->type);
     }
   }
   
