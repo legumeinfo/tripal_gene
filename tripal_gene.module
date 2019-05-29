@@ -243,6 +243,8 @@ function tripal_gene_views_api() {
   * Modify the query before it is executed.
   */
 function tripal_gene_views_query_alter(&$view, &$query) {
+    //adf: bypass this for now; at least until we figure out why it is causing problems for the add all funcion of the "basket"
+    return;
   // If a term is set in the description field, use it to search OBO terms as well as
   //    description fields
   if (isset($view->exposed_raw_input['description']) && ($term = $view->exposed_raw_input['description'])) {
